@@ -12,7 +12,7 @@ class Information : AppCompatActivity() {
     }
 
     fun Copy(view: View) {
-        
+
     }
     fun GotoMain(view: View) {
         val intent= Intent(this,MainActivity::class.java)

@@ -1,5 +1,6 @@
 package com.example.passwordmanager
 
+import android.app.Application
 import android.app.KeyguardManager
 import android.content.Context
 import android.content.Intent
@@ -16,6 +17,7 @@ import androidx.biometric.BiometricManager.Authenticators.BIOMETRIC_STRONG
 import androidx.biometric.BiometricManager.Authenticators.BIOMETRIC_WEAK
 import androidx.biometric.BiometricPrompt
 import androidx.core.content.ContextCompat
+import com.example.passwordmanager.R.id.TextPassword
 import java.util.concurrent.Executor
 
 
@@ -77,8 +79,25 @@ class LoginActivity : AppCompatActivity() {
 
     fun toMainActivity(view: View) {
 
+        val password = findViewById<EditText>(TextPassword)
+        val pass= password.text.toString()
+        val sharedPreferences2 = getSharedPreferences("Password", MODE_PRIVATE)
+        val sharedPreferences = getSharedPreferences("sharedPref", MODE_PRIVATE)
+        val checking = sharedPreferences2.getString("Password", "")
+        if(checking.equals(pass))
+        {
+            val editor = sharedPreferences.edit()
+            editor.apply {
+                putString("User", "1")
+            }.apply()
 
-        biometricPrompt.authenticate(promptInfo)
+
+            biometricPrompt.authenticate(promptInfo)}
+        else
+        {
+            Toast.makeText(applicationContext,"Wrong Password",Toast.LENGTH_SHORT).show()
+        }
+
 
     }
 

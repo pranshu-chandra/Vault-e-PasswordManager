@@ -3,10 +3,12 @@ package com.example.passwordmanager
 import android.app.KeyguardManager
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.biometric.BiometricManager
@@ -23,6 +25,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var biometricPrompt: BiometricPrompt
     private lateinit var promptInfo: BiometricPrompt.PromptInfo
  //   private val km = getSystemService(Context.KEYGUARD_SERVICE) as KeyguardManager
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -71,7 +74,10 @@ class LoginActivity : AppCompatActivity() {
 
     }
 
+
     fun toMainActivity(view: View) {
+
+
         biometricPrompt.authenticate(promptInfo)
 
     }

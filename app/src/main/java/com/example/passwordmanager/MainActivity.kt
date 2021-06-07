@@ -23,4 +23,15 @@ class MainActivity : AppCompatActivity() {
         val intent= Intent(this,Existing::class.java)
         startActivity(intent)
     }
+    fun Log(view: View)
+    {
+        val sharedPreferences =getSharedPreferences("sharedPref", MODE_PRIVATE)
+        val editor=sharedPreferences.edit()
+        editor.apply{
+            putString("User","0")
+        }.apply()
+
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
+    }
 }

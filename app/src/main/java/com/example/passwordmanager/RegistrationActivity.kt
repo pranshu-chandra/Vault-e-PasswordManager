@@ -6,7 +6,9 @@ import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 
+
 class RegistrationActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registration)
@@ -17,10 +19,20 @@ class RegistrationActivity : AppCompatActivity() {
 
 
 
+
     }
 
-    fun toLogin(view: View) {
-        val intent = Intent(this, LoginActivity::class.java)
-        startActivity(intent)
+      fun toLogin(view:View) {
+          val sharedPreferences = getSharedPreferences("sharedPref", MODE_PRIVATE)
+
+
+        val editor=sharedPreferences.edit()
+        editor.apply {
+            putString("User", "1")
+        }.apply()
+
+          val intent123 = Intent(this, LoginActivity::class.java)
+          startActivity(intent123)
+
     }
 }

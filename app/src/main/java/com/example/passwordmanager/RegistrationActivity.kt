@@ -7,6 +7,11 @@ import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
+import androidx.security.crypto.EncryptedSharedPreferences
+import androidx.security.crypto.EncryptedSharedPreferences.*
+import androidx.security.crypto.MasterKey
+import androidx.security.crypto.MasterKeys
+import androidx.security.crypto.MasterKeys.*
 
 var pass=""
 var confirm=""
@@ -27,14 +32,24 @@ class RegistrationActivity : AppCompatActivity() {
 
       @SuppressLint("ShowToast")
       fun toLogin(view:View) {
+          val masterKey = MasterKey.Builder(applicationContext)
+              .setKeyScheme(MasterKey.KeyScheme.AES256_GCM)
+              .build()
+          val sharedPreferences2 = create(applicationContext,
+              "Password",
+              masterKey,
+              PrefKeyEncryptionScheme.AES256_SIV,
+              PrefValueEncryptionScheme.AES256_GCM)
+
+
           val sharedPreferences = getSharedPreferences("sharedPref", MODE_PRIVATE)
-          var sharedPreferences2 = getSharedPreferences("Password", MODE_PRIVATE)
+
           val password = findViewById<EditText>(R.id.editTextTextPassword)
           val passwordConfirm = findViewById<EditText>(R.id.editTextTextPassword2)
         pass=password.text.toString()
           confirm=passwordConfirm.text.toString()
 
-          if(pass== confirm) {
+          if(pass== confirm && pass != "") {
               val editor = sharedPreferences.edit()
               editor.apply {
                   putString("User", "1")
@@ -56,7 +71,7 @@ class RegistrationActivity : AppCompatActivity() {
           else {
               Toast.makeText(
                   applicationContext,
-                  "Please Enter Correct Password",
+                  "Please Enter Correct Password and don't leave the field empty",
                   Toast.LENGTH_SHORT
               ).show()
           }

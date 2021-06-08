@@ -17,6 +17,8 @@ import androidx.biometric.BiometricManager.Authenticators.BIOMETRIC_STRONG
 import androidx.biometric.BiometricManager.Authenticators.BIOMETRIC_WEAK
 import androidx.biometric.BiometricPrompt
 import androidx.core.content.ContextCompat
+import androidx.security.crypto.EncryptedSharedPreferences
+import androidx.security.crypto.MasterKey
 import com.example.passwordmanager.R.id.TextPassword
 import java.util.concurrent.Executor
 
@@ -79,12 +81,26 @@ class LoginActivity : AppCompatActivity() {
 
     fun toMainActivity(view: View) {
 
+        val masterKey = MasterKey.Builder(applicationContext)
+            .setKeyScheme(MasterKey.KeyScheme.AES256_GCM)
+            .build()
         val password = findViewById<EditText>(TextPassword)
-        val pass= password.text.toString()
-        val sharedPreferences2 = getSharedPreferences("Password", MODE_PRIVATE)
-        val sharedPreferences = getSharedPreferences("sharedPref", MODE_PRIVATE)
+        val passw= password.text.toString()
+        val sharedPreferences = getSharedPreferences("User", MODE_PRIVATE)
+        val sharedPreferences2 = EncryptedSharedPreferences.create(applicationContext,"Password",
+            masterKey,
+        EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
+        EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM)
+
+         val editor2 =sharedPreferences2.edit()
+        editor2.apply{
+            putString("Confirm",passw)
+        }.apply()
+        val pass = sharedPreferences2.getString("Confirm","")
         val checking = sharedPreferences2.getString("Password", "")
-        if(checking.equals(pass))
+        if(passw=="")
+            Toast.makeText(applicationContext,"Enter a Password",Toast.LENGTH_SHORT).show()
+        else if(checking.equals(pass))
         {
             val editor = sharedPreferences.edit()
             editor.apply {

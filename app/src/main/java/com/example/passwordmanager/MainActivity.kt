@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.security.crypto.EncryptedSharedPreferences
+import androidx.security.crypto.MasterKey
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,8 +37,14 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
     fun Delete(view: View){
+        val masterKey = MasterKey.Builder(applicationContext)
+            .setKeyScheme(MasterKey.KeyScheme.AES256_GCM)
+            .build()
         val sharedPreferences = getSharedPreferences("sharedPref", MODE_PRIVATE)
-        val sharedPreferences2 = getSharedPreferences("Password", MODE_PRIVATE)
+        val sharedPreferences2 = EncryptedSharedPreferences.create(applicationContext,"Password",
+            masterKey,
+            EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
+            EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM)
         val editor = sharedPreferences.edit()
         editor.apply {
             putString("User", "0")

@@ -68,6 +68,18 @@
         android:onClick="Log"
 
         />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/teal_700"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="Delete Acc"
+        android:onClick="Delete"
+
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -89,28 +89,43 @@
         tools:layout_editor_absoluteX="185dp"
         tools:layout_editor_absoluteY="124dp" />
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="350dp"
-        android:layout_height="30dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="450dp"
-        app:layout_constraintTop_toBottomOf="@id/SecurityQ"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:spinnerMode="dropdown"/>
     <EditText
         android:id="@+id/SecurityQA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
         android:ems="15"
         android:inputType="textPassword"
         android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/spinner"
+        android:layout_marginTop="15dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="30dp"
+        tools:layout_editor_absoluteY="517dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:id="@+id/spinner"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+
+        app:layout_constraintTop_toBottomOf="@id/SecurityQ"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@id/spinner" />
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:inputType="none"
+            android:padding="12dp"
+            android:text="Kimi no na wa"
+            android:textSize="16sp"
+            android:textColor="@color/teal_700"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

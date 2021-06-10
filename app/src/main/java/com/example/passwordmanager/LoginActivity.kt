@@ -86,7 +86,7 @@ class LoginActivity : AppCompatActivity() {
             .build()
         val password = findViewById<EditText>(TextPassword)
         val passw= password.text.toString()
-        val sharedPreferences = getSharedPreferences("User", MODE_PRIVATE)
+        val sharedPreferences = getSharedPreferences("sharedPref", MODE_PRIVATE)
         val sharedPreferences2 = EncryptedSharedPreferences.create(applicationContext,"Password",
             masterKey,
         EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,

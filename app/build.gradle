@@ -1,10 +1,14 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+
 }
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 30
     buildToolsVersion '29.0.0'
 
     defaultConfig {
@@ -27,8 +31,12 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    packagingOptions {
+        exclude 'META-INF/atomicfu.kotlin_module'
+    }
+
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = "1.8"
     }
 }
 
@@ -46,4 +54,45 @@ dependencies {
 
     implementation "androidx.biometric:biometric-ktx:1.2.0-alpha03"
     implementation 'androidx.cardview:cardview:1.0.0'
+
+    def room_version = "2.3.0"
+
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+
+    // optional - RxJava2 support for Room
+    implementation "androidx.room:room-rxjava2:$room_version"
+
+    // optional - RxJava3 support for Room
+    implementation "androidx.room:room-rxjava3:$room_version"
+
+    // optional - Guava support for Room, including Optional and ListenableFuture
+    implementation "androidx.room:room-guava:$room_version"
+
+    // optional - Test helpers
+    testImplementation "androidx.room:room-testing:$room_version"
+    implementation "android.arch.lifecycle:extensions:1.1.1"
+    implementation "android.arch.lifecycle:common-java8:1.1.1"
+//annotationProcessor "android.arch.lifecycle:compiler:1.0.0"
+
+// Room
+    implementation "android.arch.persistence.room:runtime:1.1.1"
+    annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
+
+// Test helpers for Room
+    testImplementation "android.arch.persistence.room:testing:1.0.0"
+
+    implementation "androidx.security:security-crypto:1.0.0"
+
+    // For Identity Credential APIs
+    implementation "androidx.security:security-identity-credential:1.0.0-alpha02"
+
+    // For App Authentication APIs
+    implementation "androidx.security:security-app-authenticator:1.0.0-alpha02"
+
+    // For App Authentication API testing
+    androidTestImplementation "androidx.security:security-app-authenticator:1.0.0-alpha01"
+
+    compile 'com.scottyab:aescrypt:0.0.1'
+
 }

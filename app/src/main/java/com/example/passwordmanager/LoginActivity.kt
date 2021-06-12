@@ -78,6 +78,11 @@ class LoginActivity : AppCompatActivity() {
 
     }
 
+    fun forgotPass(view:View){
+        val intent1 = Intent(this, ForgotPassword::class.java)
+        startActivity(intent1)
+    }
+
 
     fun toMainActivity(view: View) {
 

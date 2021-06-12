@@ -19,6 +19,9 @@
         app:layout_constraintStart_toStartOf="parent"
         android:text="Password Generator"
         android:textSize="50sp"
+        android:textStyle="italic"
+        android:textColorHint="@color/teal_700"
+
         android:id="@+id/splashtext"
         android:textColor="@color/white"
         />

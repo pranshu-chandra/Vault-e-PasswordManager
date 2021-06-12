@@ -22,6 +22,8 @@ import java.security.Provider
 
 var pass=""
 var confirm=""
+var secQ =""
+var secA=""
 class RegistrationActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,7 +42,10 @@ class RegistrationActivity : AppCompatActivity() {
     }
 
 
+    // onClick for Forgot Password
 
+
+                                        // onClick for Create Account
     @SuppressLint("ShowToast")
       fun toLogin(view:View) {
           val masterKey = MasterKey.Builder(applicationContext)
@@ -53,12 +58,19 @@ class RegistrationActivity : AppCompatActivity() {
               PrefValueEncryptionScheme.AES256_GCM)
 
 
+                       var securityAnswer = findViewById<EditText>(R.id.SecurityQA)
+                       val spinner= findViewById<AutoCompleteTextView>(R.id.autoCompleteTextView)
+
           val sharedPreferences = getSharedPreferences("sharedPref", MODE_PRIVATE)
 
-          val password = findViewById<EditText>(R.id.editTextTextPassword)
-          val passwordConfirm = findViewById<EditText>(R.id.editTextTextPassword2)
+                           val password = findViewById<EditText>(R.id.editTextTextPassword)
+                           val passwordConfirm = findViewById<EditText>(R.id.editTextTextPassword2)
+
         pass=password.text.toString()
-          confirm=passwordConfirm.text.toString()
+         confirm=passwordConfirm.text.toString()
+            secQ=spinner.text.toString()
+                secA=securityAnswer.text.toString()
+
 
           if(pass== confirm && pass != "") {
               val editor = sharedPreferences.edit()
@@ -69,12 +81,18 @@ class RegistrationActivity : AppCompatActivity() {
               val editor2 =sharedPreferences2.edit()
               editor2.apply{
                   putString("Password", pass)
+                  putString("SecurityQ",secQ)
+                  putString("SecurityA",secA)
               }.apply()
               Toast.makeText(
                   applicationContext,
                   "Welcome",
                   Toast.LENGTH_SHORT
               ).show()
+
+
+
+
               val intent123 = Intent(this, LoginActivity::class.java)
               startActivity(intent123)
 

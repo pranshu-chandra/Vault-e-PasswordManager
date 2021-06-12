@@ -16,7 +16,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="185dp"
         tools:layout_editor_absoluteY="124dp" />
@@ -27,11 +27,12 @@
         android:text="Create New Password"
         android:textAlignment="center"
         android:textSize="20sp"
+        android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@id/Title"
         app:layout_constraintLeft_toLeftOf="parent"
         android:textStyle="bold"
         android:layout_marginLeft="30dp"
-        android:paddingTop="50dp"
+        android:paddingTop="20dp"
         tools:layout_editor_absoluteX="185dp"
         tools:layout_editor_absoluteY="124dp" />
 
@@ -95,6 +96,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:ems="15"
+        android:hint="Answer the Security Question"
         android:inputType="textPassword"
         android:textSize="20sp"
         app:layout_constraintTop_toBottomOf="@id/spinner"
@@ -136,7 +138,10 @@
         android:layout_marginTop="20dp"
         android:text="Create Account"
         android:onClick="toLogin"
-        android:backgroundTint="@color/black"/>
+        android:backgroundTint="@color/teal_700"/>
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

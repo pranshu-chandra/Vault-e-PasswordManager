@@ -82,7 +82,7 @@
         android:layout_marginTop="30dp"
         android:text="Generate Password"
         android:onClick="toInfo"
-        android:backgroundTint="@color/black"/>
+        android:backgroundTint="@color/teal_700"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

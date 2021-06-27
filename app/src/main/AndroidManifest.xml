@@ -19,7 +19,10 @@
         <activity android:name=".GetPassword" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegistrationActivity" />
-        <activity android:name=".SplashScreen">
+        <activity android:name=".SplashScreen"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:clearTaskOnLaunch="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

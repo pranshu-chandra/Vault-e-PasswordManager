@@ -17,22 +17,23 @@ class SplashScreen : AppCompatActivity(){
         val sharedPreferences = getSharedPreferences("sharedPref", MODE_PRIVATE)
         val checking = sharedPreferences.getString("User", "")
 
-        Handler().postDelayed({},5000)
-        when {
-            checking.equals("1") -> {
-                val intent1 = Intent(this, MainActivity::class.java)
-                startActivity(intent1)
-            }
-            checking.equals("2") -> {
-                val intent2 = Intent(this, LoginActivity::class.java)
-                startActivity(intent2)
-            }
-            else -> {
-                val intent3 = Intent(this, RegistrationActivity::class.java)
-                startActivity(intent3)
+        Handler().postDelayed({
+            when {
+                checking.equals("1") -> {
+                    val intent1 = Intent(this, MainActivity::class.java)
+                    startActivity(intent1)
+                }
+                checking.equals("2") -> {
+                    val intent2 = Intent(this, LoginActivity::class.java)
+                    startActivity(intent2)
+                }
+                else -> {
+                    val intent3 = Intent(this, RegistrationActivity::class.java)
+                    startActivity(intent3)
 
+                }
             }
-        }
+        },1000)
 
 
     }

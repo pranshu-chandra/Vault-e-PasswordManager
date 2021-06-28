@@ -65,7 +65,7 @@ class Existing : AppCompatActivity() {
 
 
 
-        val intent= Intent(this,Information::class.java)
+        val intent= Intent(this,MainActivity::class.java)
         startActivity(intent)
     }
 }

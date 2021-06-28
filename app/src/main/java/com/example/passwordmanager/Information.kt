@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import android.widget.Toast
 import androidx.room.Room
 import com.example.passwordmanager.Data.User
 import com.example.passwordmanager.Data.UserDatabase
@@ -19,7 +20,7 @@ class Information : AppCompatActivity() {
         setContentView(R.layout.activity_information)
 
 
-
+            var temp=""
 
         var websitename = intent.getStringExtra("website")
         var usernamename= intent.getStringExtra("username")
@@ -35,11 +36,14 @@ class Information : AppCompatActivity() {
                 applicationContext,
                 UserDatabase::class.java, "user_database"
             ).build()
-          Passwordinfo.text =  db.userDao().getPass(websitename.toString(), usernamename.toString())
+      Passwordinfo.text =  db.userDao().getPass(websitename.toString(), usernamename.toString())
+
         }
 
-        WebsiteNameinfo.text =websitename
-        UserNameinfo.text=usernamename
+
+            WebsiteNameinfo.text = websitename
+            UserNameinfo.text = usernamename
+
 
     }
 

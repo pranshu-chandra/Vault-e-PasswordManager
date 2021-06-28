@@ -4,8 +4,13 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.room.Room
 import androidx.security.crypto.EncryptedSharedPreferences
 import androidx.security.crypto.MasterKey
+import com.example.passwordmanager.Data.User
+import com.example.passwordmanager.Data.UserDatabase
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,6 +57,14 @@ class MainActivity : AppCompatActivity() {
 
         val editor2 =sharedPreferences2.edit()
         editor2.clear().apply()
+
+        GlobalScope.launch {
+            val db = Room.databaseBuilder(
+                applicationContext,
+                UserDatabase::class.java, "user_database"
+            ).build()
+            db.userDao().delete()
+        }
 
         val intent3 = Intent(this, RegistrationActivity::class.java)
         startActivity(intent3)

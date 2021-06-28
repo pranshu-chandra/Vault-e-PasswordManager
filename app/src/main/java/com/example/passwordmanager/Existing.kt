@@ -29,18 +29,28 @@ class Existing : AppCompatActivity() {
 
 
 
-    val website="Facebook"
-    val username ="Naman"
-    val password = "LOLOL"
+  //  var website=""
+  //  var username =""
+  //  var password = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_existing)
 
-       // val website = findViewById<EditText>(R.id.editTextWebsite).text.toString()
-       // val username = findViewById<EditText>(R.id.editTextUsername).text.toString()
-       // val password = findViewById<EditText>(R.id.editTextPassword).text.toString()
 
 
+
+
+
+    }
+
+
+    fun toInfo(view: View) {
+
+        val website = findViewById<EditText>(R.id.editTextWebsite).text.toString()
+        val username = findViewById<EditText>(R.id.editTextUsername).text.toString()
+        val password  = findViewById<EditText>(R.id.editTextPassword).text.toString()
+
+        // mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
         var pass:String?=""
 
         GlobalScope.launch {
@@ -55,22 +65,7 @@ class Existing : AppCompatActivity() {
 
 
 
-
-
-
-
-    }
-
-
-    fun toInfo(view: View) {
-
-
-
-        // mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
-
-
-
-        // val intent= Intent(this,Information::class.java)
-       // startActivity(intent)
+        val intent= Intent(this,Information::class.java)
+        startActivity(intent)
     }
 }

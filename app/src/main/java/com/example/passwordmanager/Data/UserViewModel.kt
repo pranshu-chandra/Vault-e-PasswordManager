@@ -1,9 +1,7 @@
 package com.example.passwordmanager.Data
 
 import android.app.Application
-import android.provider.ContactsContract
 import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -12,7 +10,7 @@ class UserViewModel(application: Application): AndroidViewModel(application) {
 
   //  private val getPass: LiveData<User>
     private val repository:UserRepository
-    lateinit var getPass: User
+    lateinit var getPass: String
 
 
     init{
@@ -24,6 +22,12 @@ class UserViewModel(application: Application): AndroidViewModel(application) {
             viewModelScope.launch (Dispatchers.IO){
                 getPass=repository.getPass(website,username)
             }
+    }
+
+    fun delete() {
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.delete()
+        }
     }
 
 

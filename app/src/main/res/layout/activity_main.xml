@@ -39,7 +39,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/GetPassword"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="40dp"
         android:ems="20"
         android:onClick="Generate"
         />
@@ -51,11 +51,34 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/Generate"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="40dp"
         android:ems="20"
         android:onClick="Existing"
         />
-
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/DeleteAccount"
+        android:text="Delete an Account"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/SaveExisting"
+        android:layout_marginTop="40dp"
+        android:ems="20"
+        android:onClick="DeleteAccount"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/DeleteAll"
+        android:text="Delete All Accounts"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/DeleteAccount"
+        android:layout_marginTop="40dp"
+        android:ems="20"
+        android:onClick="DeleteAll"
+        />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

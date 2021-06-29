@@ -36,11 +36,11 @@
 
     <EditText
         android:id="@+id/editTextWebsite"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="15"
         android:textSize="20sp"
         android:hint="Enter the website"
+        android:layout_marginEnd="30dp"
 
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="30dp"
@@ -65,11 +65,11 @@
 
     <EditText
         android:id="@+id/editTextUsername"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="15"
         android:textSize="20sp"
         android:hint="Enter your username"
+        android:layout_marginEnd="30dp"
 
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="30dp"
@@ -94,13 +94,16 @@
 
     <EditText
         android:id="@+id/editTextPassword"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="15"
+        android:layout_marginEnd="30dp"
+
         android:inputType="textPassword"
         android:textSize="20sp"
         android:background="@drawable/button_outline_edittext"
         android:padding="8dp"
+        android:hint="Enter your password"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"

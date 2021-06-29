@@ -17,11 +17,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="Password Generator"
+        android:text="Password \n Manager"
         android:textSize="50sp"
         android:textStyle="italic"
         android:textColorHint="@color/teal_700"
-        android:fontFamily="sans-serif-light"
+        android:fontFamily="sans-serif-thin"
         android:id="@+id/splashtext"
         android:textColor="@color/white"
         />

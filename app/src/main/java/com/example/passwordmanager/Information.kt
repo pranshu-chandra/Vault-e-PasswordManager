@@ -93,10 +93,12 @@ class Information : AppCompatActivity() {
     fun GotoMain(view: View) {
         val intent= Intent(this,MainActivity::class.java)
         startActivity(intent)
+        this.finish()
     }
     fun emptymain(){
         Toast.makeText(this, "Account doesn't exist",Toast.LENGTH_LONG).show()
         val intent= Intent(this,MainActivity::class.java)
         startActivity(intent)
+        this.finish()
     }
 }

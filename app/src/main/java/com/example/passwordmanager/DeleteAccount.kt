@@ -58,6 +58,7 @@ class DeleteAccount : AppCompatActivity() {
                             // User cancelled the dialog
                             val intent= Intent(this,MainActivity::class.java)
                             startActivity(intent)
+                            this.finish()
                         })
                 val alertDialog: AlertDialog =builder.create()
                 alertDialog.show()
@@ -84,5 +85,6 @@ class DeleteAccount : AppCompatActivity() {
         Toast.makeText(this,"Account Deleted!",Toast.LENGTH_LONG).show()
         val intent= Intent(this,MainActivity::class.java)
         startActivity(intent)
+        this.finish()
     }
 }

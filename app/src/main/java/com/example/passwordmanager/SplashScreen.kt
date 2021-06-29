@@ -22,14 +22,19 @@ class SplashScreen : AppCompatActivity(){
             checking.equals("1") -> {
                 val intent1 = Intent(this, MainActivity::class.java)
                 startActivity(intent1)
+                this.finish()
             }
             checking.equals("2") -> {
                 val intent2 = Intent(this, LoginActivity::class.java)
                 startActivity(intent2)
+                this.finish()
+
             }
             else -> {
                 val intent3 = Intent(this, RegistrationActivity::class.java)
                 startActivity(intent3)
+                this.finish()
+
 
             }
         }

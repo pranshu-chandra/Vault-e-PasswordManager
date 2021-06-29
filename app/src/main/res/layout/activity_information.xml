@@ -82,7 +82,7 @@
         android:layout_marginTop="20dp"
         android:text="Copy Password"
         android:onClick="Copy"
-        android:backgroundTint="@color/teal_700"/>
+        android:backgroundTint="@color/purple_500"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -93,7 +93,7 @@
         android:layout_marginTop="20dp"
         android:text="Go to Main Menu"
         android:onClick="GotoMain"
-        android:backgroundTint="@color/teal_700"/>
+        android:backgroundTint="@color/purple_500"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

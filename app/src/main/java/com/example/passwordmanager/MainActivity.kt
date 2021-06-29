@@ -44,6 +44,7 @@ class MainActivity : AppCompatActivity() {
         }.apply()
 
         val intent = Intent(this, LoginActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(intent)
     }
     fun Delete(view: View){
@@ -72,6 +73,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         val intent3 = Intent(this, RegistrationActivity::class.java)
+        intent3.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(intent3)
 
     }

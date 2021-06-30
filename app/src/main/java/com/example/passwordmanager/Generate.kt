@@ -19,6 +19,7 @@ import com.scottyab.aescrypt.AESCrypt
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import java.security.GeneralSecurityException
+import java.util.*
 import kotlin.random.Random
 
 class Generate : AppCompatActivity() {
@@ -35,6 +36,7 @@ class Generate : AppCompatActivity() {
 
     fun toInfo(view: View) {
         val website = findViewById<EditText>(R.id.editTextWebsite).text.toString()
+            .lowercase(Locale.getDefault())
         val username = findViewById<EditText>(R.id.editTextUsername).text.toString()
         if (website.isEmpty()){
             Toast.makeText(this, "Please fill website name",Toast.LENGTH_SHORT).show()

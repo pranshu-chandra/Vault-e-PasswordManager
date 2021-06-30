@@ -47,27 +47,39 @@
         android:layout_marginTop="50dp"
         tools:layout_editor_absoluteX="185dp"
         tools:layout_editor_absoluteY="124dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/etPasswordLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:passwordToggleEnabled="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Password_Text"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/button_outline_edittext"
+
+        >
     <EditText
         android:id="@+id/TextPassword"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="15"
+        android:layout_height="match_parent"
         android:inputType="textPassword"
         android:textSize="20sp"
-        android:hint="Enter Password"
-        android:padding="8dp"
-        android:layout_marginEnd="30dp"
-
         android:background="@drawable/button_outline_edittext"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@id/Password_Text" />
+
+        android:hint="Enter Password"
+        />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Login"
-        app:layout_constraintTop_toBottomOf="@id/TextPassword"
+        app:layout_constraintTop_toBottomOf="@id/etPasswordLayout"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="20dp"

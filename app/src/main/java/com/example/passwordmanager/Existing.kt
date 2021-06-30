@@ -24,6 +24,7 @@ import com.scottyab.aescrypt.AESCrypt
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import java.security.GeneralSecurityException
+import java.util.*
 import java.util.logging.Handler
 
 class Existing : AppCompatActivity() {
@@ -39,6 +40,7 @@ class Existing : AppCompatActivity() {
     fun toInfo(view: View) {
 
         var website = findViewById<EditText>(R.id.editTextWebsite).text.toString()
+            .lowercase(Locale.getDefault())
         var username = findViewById<EditText>(R.id.editTextUsername).text.toString()
         var password  = findViewById<EditText>(R.id.editTextPassword).text.toString()
         var passwordConfirm  = findViewById<EditText>(R.id.editTextPasswordConfirm).text.toString()

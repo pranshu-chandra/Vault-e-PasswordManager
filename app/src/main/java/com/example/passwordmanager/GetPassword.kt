@@ -13,6 +13,7 @@ import com.example.passwordmanager.Data.User
 import com.example.passwordmanager.Data.UserDatabase
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import java.util.*
 
 class GetPassword : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,6 +27,7 @@ class GetPassword : AppCompatActivity() {
     fun toInfo(view: View) {
 
         val website = findViewById<EditText>(R.id.editTextWebsite).text.toString()
+            .lowercase(Locale.getDefault())
         val username = findViewById<EditText>(R.id.editTextUsername).text.toString()
         if (website.isEmpty()){
             Toast.makeText(this, "Please fill website name",Toast.LENGTH_SHORT).show()

@@ -20,6 +20,7 @@ import kotlinx.android.synthetic.main.activity_information.*
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import java.security.GeneralSecurityException
+import java.util.*
 
 
 class Information : AppCompatActivity() {

@@ -109,7 +109,7 @@ class LoginActivity : AppCompatActivity() {
         {
             val editor = sharedPreferences.edit()
             editor.apply {
-                putString("User", "1")
+                putString("User", "2")
             }.apply()
 
 

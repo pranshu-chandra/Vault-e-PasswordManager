@@ -19,8 +19,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="20dp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="185dp"
-        tools:layout_editor_absoluteY="124dp" />
+        />
     <TextView
         android:id="@+id/Password_Text"
         android:layout_width="wrap_content"
@@ -34,8 +33,7 @@
         android:textStyle="bold"
         android:layout_marginLeft="30dp"
         android:paddingTop="10dp"
-        tools:layout_editor_absoluteX="185dp"
-        tools:layout_editor_absoluteY="124dp" />
+       />
 
     <com.google.android.material.textfield.TextInputLayout
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -47,7 +45,6 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
-        android:background="@drawable/button_outline_edittext"
         app:layout_constraintTop_toBottomOf="@id/Password_Text"
         >
         <EditText
@@ -90,7 +87,6 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
-        android:background="@drawable/button_outline_edittext"
         app:layout_constraintTop_toBottomOf="@id/Password_Text2"
         >
 
@@ -132,15 +128,14 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
-        android:background="@drawable/button_outline_edittext"
         app:layout_constraintTop_toBottomOf="@id/spinner"
+
         >
         <EditText
             android:id="@+id/SecurityQA"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/button_outline_edittext"
-
             android:hint="Answer the Security Question"
             android:inputType="textPassword"
             android:textSize="20sp"
@@ -159,6 +154,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginTop="10dp"
+
         app:layout_constraintLeft_toLeftOf="parent">
 
         <AutoCompleteTextView
@@ -166,6 +162,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/button_outline_edittext"
             android:inputType="none"
 
             android:padding="12dp"
@@ -184,6 +181,8 @@
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="20dp"
         android:text="Create Account"
+        android:textColor="@color/white"
+
         android:onClick="toLogin"
         android:backgroundTint="@color/purple_500"/>
 

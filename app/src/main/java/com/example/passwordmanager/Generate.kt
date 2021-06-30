@@ -92,6 +92,7 @@ class Generate : AppCompatActivity() {
     fun gen(){
 
         val website = findViewById<EditText>(R.id.editTextWebsite).text.toString()
+            .lowercase(Locale.getDefault())
         val username = findViewById<EditText>(R.id.editTextUsername).text.toString()
 
         val random = Random(System.nanoTime())

@@ -68,7 +68,7 @@ class ForgotPassword : AppCompatActivity() {
             editor.apply {
                 putString("User", "1")
             }.apply()
-            val intent123 = Intent(this, MainActivity::class.java)
+            val intent123 = Intent(this, change_pass::class.java)
             startActivity(intent123)
         }
 

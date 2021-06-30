@@ -81,6 +81,7 @@
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="20dp"
         android:text="Copy Password"
+        android:textColor="@color/white"
         android:onClick="Copy"
         android:backgroundTint="@color/purple_500"/>
     <Button
@@ -92,6 +93,7 @@
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="20dp"
         android:text="Go to Main Menu"
+        android:textColor="@color/white"
         android:onClick="GotoMain"
         android:backgroundTint="@color/purple_500"/>
 

@@ -59,7 +59,6 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
-        android:background="@drawable/button_outline_edittext"
 
         >
     <EditText
@@ -69,7 +68,6 @@
         android:inputType="textPassword"
         android:textSize="20sp"
         android:background="@drawable/button_outline_edittext"
-
         android:hint="Enter Password"
         />
 
@@ -84,6 +82,8 @@
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="20dp"
         android:text="Login"
+        android:textColor="@color/white"
+
         android:onClick="toMainActivity"
         android:backgroundTint="@color/purple_500"/>
     <TextView

@@ -19,11 +19,7 @@ class SplashScreen : AppCompatActivity(){
 
         Handler().postDelayed({},5000)
         when {
-            checking.equals("1") -> {
-                val intent1 = Intent(this, MainActivity::class.java)
-                startActivity(intent1)
-                this.finish()
-            }
+           
             checking.equals("2") -> {
                 val intent2 = Intent(this, LoginActivity::class.java)
                 startActivity(intent2)
@@ -41,4 +37,6 @@ class SplashScreen : AppCompatActivity(){
 
 
     }
+
+
 }

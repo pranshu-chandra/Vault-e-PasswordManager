@@ -90,6 +90,7 @@
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="30dp"
         android:text="Generate Password"
+        android:textColor="@color/white"
         android:onClick="toInfo"
         android:backgroundTint="@color/purple_500"/>
 

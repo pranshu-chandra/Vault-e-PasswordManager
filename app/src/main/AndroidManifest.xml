@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PasswordManager">
-        <activity android:name=".DeleteAll"></activity>
+        <activity android:name=".change_pass"></activity>
+        <activity android:name=".DeleteAll" />
         <activity android:name=".DeleteAccount" />
         <activity android:name=".ForgotPassword" />
         <activity android:name=".MainActivity" />

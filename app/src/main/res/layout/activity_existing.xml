@@ -30,7 +30,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         android:textStyle="bold"
         android:layout_marginLeft="30dp"
-        android:paddingTop="50dp"
+        android:paddingTop="40dp"
         tools:layout_editor_absoluteX="185dp"
         tools:layout_editor_absoluteY="124dp" />
 
@@ -38,9 +38,9 @@
         android:id="@+id/editTextWebsite"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:ems="15"
         android:textSize="20sp"
         android:hint="Enter the website"
-        android:layout_marginEnd="30dp"
 
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="30dp"
@@ -59,7 +59,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         android:textStyle="bold"
         android:layout_marginLeft="30dp"
-        android:paddingTop="50dp"
+        android:paddingTop="20dp"
         tools:layout_editor_absoluteX="185dp"
         tools:layout_editor_absoluteY="124dp" />
 
@@ -67,9 +67,9 @@
         android:id="@+id/editTextUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:ems="15"
         android:textSize="20sp"
         android:hint="Enter your username"
-        android:layout_marginEnd="30dp"
 
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="30dp"
@@ -88,7 +88,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         android:textStyle="bold"
         android:layout_marginLeft="30dp"
-        android:paddingTop="50dp"
+        android:paddingTop="20dp"
         tools:layout_editor_absoluteX="185dp"
         tools:layout_editor_absoluteY="124dp" />
 
@@ -103,7 +103,7 @@
         android:textSize="20sp"
         android:background="@drawable/button_outline_edittext"
         android:padding="8dp"
-        android:hint="Enter your password"
+        android:hint="Enter password"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"

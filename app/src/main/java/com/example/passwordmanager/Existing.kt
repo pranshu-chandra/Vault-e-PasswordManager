@@ -41,9 +41,29 @@ class Existing : AppCompatActivity() {
         val website = findViewById<EditText>(R.id.editTextWebsite).text.toString()
         val username = findViewById<EditText>(R.id.editTextUsername).text.toString()
         val password  = findViewById<EditText>(R.id.editTextPassword).text.toString()
+        val passwordConfirm  = findViewById<EditText>(R.id.editTextPasswordConfirm).text.toString()
 
         // mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
-
+        if (website.isEmpty()){
+            Toast.makeText(this, "Please fill website name",Toast.LENGTH_SHORT).show()
+            return
+        }
+        else if (username.isEmpty()){
+            Toast.makeText(this, "Please fill username",Toast.LENGTH_SHORT).show()
+            return
+        }
+        else if (password.isEmpty()){
+            Toast.makeText(this, "Please fill password",Toast.LENGTH_SHORT).show()
+            return
+        }
+        else if (passwordConfirm.isEmpty()){
+            Toast.makeText(this, "Please confirm password",Toast.LENGTH_SHORT).show()
+            return
+        }
+        else if (password!=passwordConfirm){
+            Toast.makeText(this, "Passwords don't match",Toast.LENGTH_SHORT).show()
+            return
+        }
 
         GlobalScope.launch {
             val db = Room.databaseBuilder(

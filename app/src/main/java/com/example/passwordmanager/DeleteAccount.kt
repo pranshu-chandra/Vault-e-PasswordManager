@@ -29,6 +29,14 @@ class DeleteAccount : AppCompatActivity() {
         val website = findViewById<EditText>(R.id.editTextWebsite).text.toString()
         val username = findViewById<EditText>(R.id.editTextUsername).text.toString()
 
+        if (website.isEmpty()){
+            Toast.makeText(this, "Please fill website name",Toast.LENGTH_SHORT).show()
+            return
+        }
+        else if (username.isEmpty()){
+            Toast.makeText(this, "Please fill username",Toast.LENGTH_SHORT).show()
+            return
+        }
 
 
         GlobalScope.launch {

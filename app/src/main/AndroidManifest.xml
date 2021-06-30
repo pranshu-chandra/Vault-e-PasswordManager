@@ -3,6 +3,7 @@
     package="com.example.passwordmanager">
 
     <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:allowBackup="true"
@@ -11,19 +12,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PasswordManager">
-        <activity android:name=".Information"></activity>
+        <activity android:name=".change_pass"></activity>
+        <activity android:name=".DeleteAll" />
+        <activity android:name=".DeleteAccount" />
+        <activity android:name=".ForgotPassword" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Information" />
         <activity android:name=".Existing" />
         <activity android:name=".Generate" />
         <activity android:name=".GetPassword" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".RegistrationActivity">
+        <activity android:name=".RegistrationActivity" />
+        <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>/>
+            </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"/>
     </application>
 
 </manifest>

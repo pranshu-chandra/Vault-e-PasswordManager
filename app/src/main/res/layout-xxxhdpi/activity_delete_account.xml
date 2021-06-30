@@ -4,13 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Generate">
-
+    tools:context=".DeleteAccount">
     <TextView
         android:id="@+id/Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Generate and Save \nNew Password"
+        android:text="Delete an Account"
         android:textAlignment="center"
         android:textSize="30sp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -37,16 +36,14 @@
 
     <EditText
         android:id="@+id/editTextWebsite"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="15"
+        android:hint="Enter the Website"
         android:layout_marginEnd="30dp"
-
-        android:hint="Enter the website"
-
-        android:textSize="20sp"
         android:background="@drawable/button_outline_edittext"
         android:padding="8dp"
+        android:textSize="20sp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"
@@ -68,12 +65,12 @@
 
     <EditText
         android:id="@+id/editTextUsername"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="15"
         android:hint="Enter your username"
         android:layout_marginEnd="30dp"
 
+        android:ems="15"
         android:textSize="20sp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="30dp"
@@ -89,10 +86,9 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="30dp"
-        android:text="Generate Password"
+        android:text="Delete Account"
         android:textColor="@color/white"
         android:onClick="toInfo"
         android:backgroundTint="@color/purple_500"/>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

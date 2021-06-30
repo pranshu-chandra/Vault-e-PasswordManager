@@ -10,25 +10,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Hithere"
-        android:text="Hi There!"
+        android:text="Hi There "
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="100dp"/>
+        android:layout_marginTop="80dp"/>
 
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/GetPassword"
-            android:text="Get Password"
+            android:text="Get account Password"
+            android:textColor="@color/white"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/Hithere"
-            android:layout_marginTop="70dp"
-            android:ems="20"
+            android:layout_marginTop="40dp"
+            android:ems="15"
             android:onClick="GetPassword"
             />
     <Button
@@ -36,11 +37,12 @@
         android:layout_height="wrap_content"
         android:id="@+id/Generate"
         android:text="Generate and Save Password"
+        android:textColor="@color/white"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/GetPassword"
-        android:layout_marginTop="70dp"
-        android:ems="20"
+        android:layout_marginTop="30dp"
+        android:ems="15"
         android:onClick="Generate"
         />
     <Button
@@ -48,14 +50,68 @@
         android:layout_height="wrap_content"
         android:id="@+id/SaveExisting"
         android:text="Save Existing Password"
+        android:textColor="@color/white"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/Generate"
-        android:layout_marginTop="70dp"
-        android:ems="20"
+        android:layout_marginTop="30dp"
+        android:ems="15"
         android:onClick="Existing"
         />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/DeleteAccount"
+        android:text="Delete an Account Detail"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/SaveExisting"
+        android:layout_marginTop="30dp"
+        android:ems="15"
+        android:onClick="DeleteAccount"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/DeleteAll"
+        android:text="CLEAR ALL USER DATA"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/DeleteAccount"
+        android:layout_marginTop="30dp"
+        android:ems="15"
+        android:onClick="DeleteAll"
+        />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="Log"
+        android:text="Log Out"
+
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="20dp"
+        android:text="Delete USER"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:onClick="Delete"
+        android:focusable="true"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

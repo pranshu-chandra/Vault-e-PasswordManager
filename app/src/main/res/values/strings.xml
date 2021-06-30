@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Password Manager</string>
+    <string-array name="SecurityQuestions">
+        <item>Name of your pet </item>
+        <item> Name of your High school</item>
+        <item> Your surname</item>
+        <item> Name of your college</item>
+        <item> Dream destination</item>
+        <item> Name of your Hometown </item>
+        <item> Favourite Song</item>
+    </string-array>
 </resources>

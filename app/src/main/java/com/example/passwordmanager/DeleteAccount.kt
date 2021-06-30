@@ -26,14 +26,14 @@ class DeleteAccount : AppCompatActivity() {
     }
 
     fun toInfo(view: View) {
-        val website = findViewById<EditText>(R.id.editTextWebsite).text.toString()
-        val username = findViewById<EditText>(R.id.editTextUsername).text.toString()
+        var website = findViewById<EditText>(R.id.editTextWebsite).text.toString()
+        var username = findViewById<EditText>(R.id.editTextUsername).text.toString()
 
-        if (website.isEmpty()){
+        if (website.isNullOrEmpty()){
             Toast.makeText(this, "Please fill website name",Toast.LENGTH_SHORT).show()
             return
         }
-        else if (username.isEmpty()){
+        else if (username.isNullOrEmpty()){
             Toast.makeText(this, "Please fill username",Toast.LENGTH_SHORT).show()
             return
         }
@@ -60,6 +60,7 @@ class DeleteAccount : AppCompatActivity() {
                     .setPositiveButton("Try Again",
                         DialogInterface.OnClickListener { dialog, id ->
                             dialog.dismiss()
+                            flag=0
                         })
                     .setNegativeButton("Main Menu",
                         DialogInterface.OnClickListener { dialog, id ->
@@ -80,8 +81,8 @@ class DeleteAccount : AppCompatActivity() {
 
     }
     fun del(){
-        val website = findViewById<EditText>(R.id.editTextWebsite).text.toString()
-        val username = findViewById<EditText>(R.id.editTextUsername).text.toString()
+        var website = findViewById<EditText>(R.id.editTextWebsite).text.toString()
+        var username = findViewById<EditText>(R.id.editTextUsername).text.toString()
         GlobalScope.launch {
             val db = Room.databaseBuilder(
                 applicationContext,

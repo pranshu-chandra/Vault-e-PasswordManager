@@ -136,7 +136,6 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:inputType="none"
-            android:layout_marginEnd="30dp"
 
             android:padding="12dp"
             android:text="Favourite Song"

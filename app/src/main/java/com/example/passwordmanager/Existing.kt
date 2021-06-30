@@ -38,25 +38,25 @@ class Existing : AppCompatActivity() {
 
     fun toInfo(view: View) {
 
-        val website = findViewById<EditText>(R.id.editTextWebsite).text.toString()
-        val username = findViewById<EditText>(R.id.editTextUsername).text.toString()
-        val password  = findViewById<EditText>(R.id.editTextPassword).text.toString()
-        val passwordConfirm  = findViewById<EditText>(R.id.editTextPasswordConfirm).text.toString()
+        var website = findViewById<EditText>(R.id.editTextWebsite).text.toString()
+        var username = findViewById<EditText>(R.id.editTextUsername).text.toString()
+        var password  = findViewById<EditText>(R.id.editTextPassword).text.toString()
+        var passwordConfirm  = findViewById<EditText>(R.id.editTextPasswordConfirm).text.toString()
 
         // mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
-        if (website.isEmpty()){
+        if (website.isNullOrEmpty()){
             Toast.makeText(this, "Please fill website name",Toast.LENGTH_SHORT).show()
             return
         }
-        else if (username.isEmpty()){
+        else if (username.isNullOrEmpty()){
             Toast.makeText(this, "Please fill username",Toast.LENGTH_SHORT).show()
             return
         }
-        else if (password.isEmpty()){
+        else if (password.isNullOrEmpty()){
             Toast.makeText(this, "Please fill password",Toast.LENGTH_SHORT).show()
             return
         }
-        else if (passwordConfirm.isEmpty()){
+        else if (passwordConfirm.isNullOrEmpty()){
             Toast.makeText(this, "Please confirm password",Toast.LENGTH_SHORT).show()
             return
         }
@@ -108,9 +108,9 @@ class Existing : AppCompatActivity() {
     }
 
     fun save(){
-        val website = findViewById<EditText>(R.id.editTextWebsite).text.toString()
-        val username = findViewById<EditText>(R.id.editTextUsername).text.toString()
-        val password  = findViewById<EditText>(R.id.editTextPassword).text.toString()
+        var website = findViewById<EditText>(R.id.editTextWebsite).text.toString()
+        var username = findViewById<EditText>(R.id.editTextUsername).text.toString()
+        var password  = findViewById<EditText>(R.id.editTextPassword).text.toString()
 
         var encryptedMsg:String=""
 

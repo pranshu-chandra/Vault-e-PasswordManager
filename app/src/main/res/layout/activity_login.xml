@@ -86,7 +86,7 @@
         android:textColor="@color/white"
 
         android:onClick="toMainActivity"
-        android:backgroundTint="@color/purple_500"/>
+        />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

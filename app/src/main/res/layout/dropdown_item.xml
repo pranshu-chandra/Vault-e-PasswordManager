@@ -7,7 +7,6 @@
     android:text="TextView"
     android:padding="15dp"
 
-    android:textColor="@color/purple_500"
-    android:textStyle="bold"
+    android:textColor="@color/blue_violet"
     android:textSize="18sp"
     xmlns:android="http://schemas.android.com/apk/res/android" />

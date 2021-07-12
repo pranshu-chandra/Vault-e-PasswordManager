@@ -81,7 +81,7 @@
         android:background="@drawable/button_outline_edittext"
         android:padding="8dp"
         app:layout_constraintTop_toBottomOf="@id/Username" />
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/GetPassword"
@@ -92,7 +92,7 @@
         android:text="Generate Password"
         android:textColor="@color/white"
         android:onClick="toInfo"
-        android:backgroundTint="@color/purple_500"/>
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

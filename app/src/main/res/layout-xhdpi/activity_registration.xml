@@ -168,7 +168,7 @@
 
             android:padding="12dp"
             android:text="Favourite Song"
-            android:textColor="@color/purple_500"
+            android:textColor="@color/blue_violet"
             android:textSize="16sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -185,7 +185,7 @@
         android:textColor="@color/white"
 
         android:onClick="toLogin"
-        android:backgroundTint="@color/purple_500"/>
+        />
 
 
 

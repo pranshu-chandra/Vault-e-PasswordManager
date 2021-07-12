@@ -164,7 +164,7 @@
       />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/GetPassword"
@@ -175,7 +175,6 @@
         android:text="Save Password"
         android:textColor="@color/white"
         android:onClick="toInfo"
-
-        android:backgroundTint="@color/purple_500"/>
+/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

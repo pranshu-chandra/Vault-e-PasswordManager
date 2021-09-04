@@ -1,4 +1,4 @@
-package com.example.passwordmanager
+package com.zylch.passwordmanager
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -9,8 +9,7 @@ import android.view.View
 import android.widget.EditText
 import android.widget.Toast
 import androidx.room.Room
-import com.example.passwordmanager.Data.User
-import com.example.passwordmanager.Data.UserDatabase
+import com.zylch.passwordmanager.Data.UserDatabase
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import java.util.*
@@ -52,7 +51,7 @@ class GetPassword : AppCompatActivity() {
             /* Create an Intent that will start the Menu-Activity. */
             if (flag==1)emptymain()
             else{
-                val intent= Intent(this,Information::class.java)
+                val intent= Intent(this, Information::class.java)
                 intent.putExtra("username", username)
                 intent.putExtra("website", website)
                 startActivity(intent)
@@ -66,7 +65,7 @@ class GetPassword : AppCompatActivity() {
     }
     fun emptymain(){
         Toast.makeText(this, "Account doesn't exist", Toast.LENGTH_LONG).show()
-        val intent= Intent(this,MainActivity::class.java)
+        val intent= Intent(this, MainActivity::class.java)
         startActivity(intent)
     }
 }

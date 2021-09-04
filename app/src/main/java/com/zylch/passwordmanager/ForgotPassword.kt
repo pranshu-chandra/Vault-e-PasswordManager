@@ -1,4 +1,4 @@
-package com.example.passwordmanager
+package com.zylch.passwordmanager
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -8,11 +8,8 @@ import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import android.widget.EditText
 import android.widget.Toast
-import androidx.security.crypto.EncryptedSharedPreferences
 import androidx.security.crypto.EncryptedSharedPreferences.*
 import androidx.security.crypto.MasterKey
-import kotlinx.android.synthetic.main.activity_forgot_password.*
-import kotlinx.android.synthetic.main.activity_registration.*
 
 
 var secq=""
@@ -27,7 +24,7 @@ class ForgotPassword : AppCompatActivity() {
 
         val SecQ = findViewById<AutoCompleteTextView>(R.id.SecurityForgotPass)
         val sec= resources.getStringArray(R.array.SecurityQuestions)
-        val arrayAdapter= ArrayAdapter(applicationContext,R.layout.dropdown_item,sec)
+        val arrayAdapter= ArrayAdapter(applicationContext, R.layout.dropdown_item,sec)
         SecQ.setAdapter(arrayAdapter)
     }
 
@@ -47,13 +44,13 @@ class ForgotPassword : AppCompatActivity() {
             PrefKeyEncryptionScheme.AES256_SIV,
             PrefValueEncryptionScheme.AES256_GCM
         )
-        secq= SecurityQuestion.text.toString()
-        seca= SecurityAnswer.text.toString()
+        secq = SecurityQuestion.text.toString()
+        seca = SecurityAnswer.text.toString()
 
         val editor2 =sharedPreferences2.edit()
         editor2.apply{
             putString("SecurityForgotQ", secq)
-            putString("SecurityForgotA",seca)
+            putString("SecurityForgotA", seca)
         }.apply()
 
          consecq = sharedPreferences2.getString("SecurityForgotQ","").toString()
@@ -62,7 +59,7 @@ class ForgotPassword : AppCompatActivity() {
         val secqog = sharedPreferences2.getString("SecurityQ","").toString()
         val  secaog = sharedPreferences2.getString("SecurityA", "").toString()
 
-        if(secqog==consecq && secaog == conseca)
+        if(secqog== consecq && secaog == conseca)
         {
             val editor = sharedPreferences.edit()
             editor.apply {

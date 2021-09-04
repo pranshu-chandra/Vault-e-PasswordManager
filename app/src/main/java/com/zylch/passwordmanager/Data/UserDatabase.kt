@@ -1,4 +1,4 @@
-package com.example.passwordmanager.Data
+package com.zylch.passwordmanager.Data
 
 import android.content.Context
 import androidx.room.Database

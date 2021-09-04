@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.passwordmanager">
+    package="com.zylch.passwordmanager">
 
     <uses-permission android:name="android.permission.USE_BIOMETRIC" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -12,18 +12,18 @@
         android:roundIcon="@mipmap/logo144"
         android:supportsRtl="true"
         android:theme="@style/Theme.PasswordManager">
-        <activity android:name=".change_pass" />
-        <activity android:name=".DeleteAll" />
-        <activity android:name=".DeleteAccount" />
-        <activity android:name=".ForgotPassword" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".Information" />
-        <activity android:name=".Existing" />
-        <activity android:name=".Generate" />
-        <activity android:name=".GetPassword" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".RegistrationActivity" />
-        <activity android:name=".SplashScreen">
+        <activity android:name="com.zylch.passwordmanager.change_pass" />
+        <activity android:name="com.zylch.passwordmanager.DeleteAll" />
+        <activity android:name="com.zylch.passwordmanager.DeleteAccount" />
+        <activity android:name="com.zylch.passwordmanager.ForgotPassword" />
+        <activity android:name="com.zylch.passwordmanager.MainActivity" />
+        <activity android:name="com.zylch.passwordmanager.Information" />
+        <activity android:name="com.zylch.passwordmanager.Existing" />
+        <activity android:name="com.zylch.passwordmanager.Generate" />
+        <activity android:name="com.zylch.passwordmanager.GetPassword" />
+        <activity android:name="com.zylch.passwordmanager.LoginActivity" />
+        <activity android:name="com.zylch.passwordmanager.RegistrationActivity" />
+        <activity android:name="com.zylch.passwordmanager.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,6 +1,5 @@
-package com.example.passwordmanager
+package com.zylch.passwordmanager
 
-import android.R.attr.label
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
@@ -8,13 +7,12 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.view.Menu
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.room.Room
-import com.example.passwordmanager.Data.UserDatabase
+import com.zylch.passwordmanager.Data.UserDatabase
 import com.scottyab.aescrypt.AESCrypt
 import kotlinx.android.synthetic.main.activity_information.*
 import kotlinx.coroutines.GlobalScope
@@ -92,13 +90,13 @@ class Information : AppCompatActivity() {
     }
 
     fun GotoMain(view: View) {
-        val intent= Intent(this,MainActivity::class.java)
+        val intent= Intent(this, MainActivity::class.java)
         startActivity(intent)
         this.finish()
     }
     fun emptymain(){
         Toast.makeText(this, "Account doesn't exist",Toast.LENGTH_LONG).show()
-        val intent= Intent(this,MainActivity::class.java)
+        val intent= Intent(this, MainActivity::class.java)
         startActivity(intent)
         this.finish()
     }

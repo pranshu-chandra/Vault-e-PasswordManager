@@ -1,4 +1,4 @@
-package com.example.passwordmanager.Data
+package com.zylch.passwordmanager.Data
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

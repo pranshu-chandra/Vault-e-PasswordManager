@@ -1,10 +1,8 @@
-package com.example.passwordmanager.Data
+package com.zylch.passwordmanager.Data
 
-import androidx.annotation.WorkerThread
-import androidx.lifecycle.LiveData
 import androidx.room.*
 import androidx.room.OnConflictStrategy.REPLACE
-import com.example.passwordmanager.Data.User as User
+import com.zylch.passwordmanager.Data.User as User
 
 @Dao
 interface UserDao {

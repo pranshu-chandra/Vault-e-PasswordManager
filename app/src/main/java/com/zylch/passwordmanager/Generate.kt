@@ -1,6 +1,5 @@
-package com.example.passwordmanager
+package com.zylch.passwordmanager
 
-import android.app.Dialog
 import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -13,8 +12,8 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.room.Room
-import com.example.passwordmanager.Data.User
-import com.example.passwordmanager.Data.UserDatabase
+import com.zylch.passwordmanager.Data.User
+import com.zylch.passwordmanager.Data.UserDatabase
 import com.scottyab.aescrypt.AESCrypt
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -67,7 +66,7 @@ class Generate : AppCompatActivity() {
                 builder.setMessage("Account already exists")
                     .setPositiveButton("Cancel",
                         DialogInterface.OnClickListener { dialog, id ->
-                            val intent= Intent(this,MainActivity::class.java)
+                            val intent= Intent(this, MainActivity::class.java)
                             startActivity(intent)
                         })
                     .setNegativeButton("Replace",
@@ -156,7 +155,7 @@ class Generate : AppCompatActivity() {
         Toast.makeText(this, "Account Added",Toast.LENGTH_LONG).show()
 
 
-        val intent= Intent(this,Information::class.java)
+        val intent= Intent(this, Information::class.java)
         intent.putExtra("website", website)
         intent.putExtra("username", username)
         startActivity(intent)

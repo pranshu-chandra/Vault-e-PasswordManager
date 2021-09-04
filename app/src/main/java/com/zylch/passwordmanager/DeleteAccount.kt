@@ -1,4 +1,4 @@
-package com.example.passwordmanager
+package com.zylch.passwordmanager
 
 import android.content.DialogInterface
 import android.content.Intent
@@ -11,12 +11,9 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.room.Room
-import com.example.passwordmanager.Data.User
-import com.example.passwordmanager.Data.UserDatabase
-import com.scottyab.aescrypt.AESCrypt
+import com.zylch.passwordmanager.Data.UserDatabase
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-import java.security.GeneralSecurityException
 
 class DeleteAccount : AppCompatActivity() {
     var flag=0
@@ -65,7 +62,7 @@ class DeleteAccount : AppCompatActivity() {
                     .setNegativeButton("Main Menu",
                         DialogInterface.OnClickListener { dialog, id ->
                             // User cancelled the dialog
-                            val intent= Intent(this,MainActivity::class.java)
+                            val intent= Intent(this, MainActivity::class.java)
                             startActivity(intent)
                             this.finish()
                         })
@@ -92,7 +89,7 @@ class DeleteAccount : AppCompatActivity() {
             db.userDao().deleteSpecified(website,username)
         }
         Toast.makeText(this,"Account Deleted!",Toast.LENGTH_LONG).show()
-        val intent= Intent(this,MainActivity::class.java)
+        val intent= Intent(this, MainActivity::class.java)
         startActivity(intent)
         this.finish()
     }

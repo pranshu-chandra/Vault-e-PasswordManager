@@ -1,4 +1,4 @@
-package com.example.passwordmanager;
+package com.zylch.passwordmanager;
 
 import android.app.Activity;
 

@@ -1,4 +1,4 @@
-package com.example.passwordmanager.Data
+package com.zylch.passwordmanager.Data
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
@@ -9,7 +9,7 @@ import kotlinx.coroutines.launch
 class UserViewModel(application: Application): AndroidViewModel(application) {
 
   //  private val getPass: LiveData<User>
-    private val repository:UserRepository
+    private val repository: UserRepository
     lateinit var getPass: String
 
 
@@ -31,7 +31,7 @@ class UserViewModel(application: Application): AndroidViewModel(application) {
     }
 
 
-    fun insert(user:User){
+    fun insert(user: User){
         viewModelScope.launch (Dispatchers.IO){
             repository.insert(user)
         }

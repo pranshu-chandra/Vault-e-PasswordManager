@@ -1,9 +1,9 @@
-package com.example.passwordmanager.Data
+package com.zylch.passwordmanager.Data
 
 import android.content.Context
 import androidx.lifecycle.LiveData
 
-class UserRepository(private val userDao:UserDao) {
+class UserRepository(private val userDao: UserDao) {
 
 
     var loginDatabase: UserDatabase? = null
@@ -12,7 +12,7 @@ class UserRepository(private val userDao:UserDao) {
         return UserDatabase.getDatabase(context)
     }
 
-    fun insert (user:User){
+    fun insert (user: User){
         userDao.insert(user)
     }
 
